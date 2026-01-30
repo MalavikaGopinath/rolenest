@@ -1,0 +1,33 @@
+# =====================
+# .NET
+# =====================
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.log
+*.db
+*.db-shm
+*.db-wal
+
+# =====================
+# Node / React
+# =====================
+node_modules/
+dist/
+.env
+.env.local
+
+# =====================
+# OS / IDE
+# =====================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# =====================
+# Docker
+# =====================
+docker-data/
