@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoleNest.API", "RoleNest.API\RoleNest.API.csproj", "{04DB0F0D-9DEB-481A-9165-47CA9BDD1181}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoleNest.Application", "RoleNest.Application\RoleNest.Application.csproj", "{9C9D131E-0616-4303-B8B2-4A1D8647E8CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoleNest.Domain", "RoleNest.Domain\RoleNest.Domain.csproj", "{7C94619F-7EB8-4E92-9612-69FD715CBA9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoleNest.Infrastructure", "RoleNest.Infrastructure\RoleNest.Infrastructure.csproj", "{2A595E99-819C-4769-9319-DA4D8EBFAA0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04DB0F0D-9DEB-481A-9165-47CA9BDD1181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04DB0F0D-9DEB-481A-9165-47CA9BDD1181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04DB0F0D-9DEB-481A-9165-47CA9BDD1181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04DB0F0D-9DEB-481A-9165-47CA9BDD1181}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C9D131E-0616-4303-B8B2-4A1D8647E8CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C9D131E-0616-4303-B8B2-4A1D8647E8CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C9D131E-0616-4303-B8B2-4A1D8647E8CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C9D131E-0616-4303-B8B2-4A1D8647E8CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C94619F-7EB8-4E92-9612-69FD715CBA9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C94619F-7EB8-4E92-9612-69FD715CBA9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C94619F-7EB8-4E92-9612-69FD715CBA9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C94619F-7EB8-4E92-9612-69FD715CBA9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A595E99-819C-4769-9319-DA4D8EBFAA0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A595E99-819C-4769-9319-DA4D8EBFAA0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A595E99-819C-4769-9319-DA4D8EBFAA0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A595E99-819C-4769-9319-DA4D8EBFAA0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

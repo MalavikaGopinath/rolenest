@@ -1,0 +1,6 @@
+@RoleNest.API_HostAddress = http://localhost:5084
+
+GET {{RoleNest.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
