@@ -1,11 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 using RoleNest.Application.Interfaces.Repositories;
+using RoleNest.Application.Interfaces.Services;
+using RoleNest.Application.Services;
 using RoleNest.Infrastructure.Persistence;
 using RoleNest.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
