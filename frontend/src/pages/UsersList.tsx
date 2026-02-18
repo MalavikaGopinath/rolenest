@@ -28,6 +28,7 @@ const UsersList = () => {
           <li key={user.id}>
             {user.firstName} {user.lastName} - {user.email} ({user.role})
             <Link to={`/users/${user.id}`}> View </Link>
+            <Link to={`/users/edit/${user.id}`}> Edit </Link>
             <button onClick={() => handleDelete(user.id)}>Delete</button>
           </li>
         ))}
