@@ -1,12 +1,13 @@
+using RoleNest.Application.DTOs.Users;
 using RoleNest.Domain.Entities;
 
 namespace RoleNest.Application.Interfaces.Services;
 
 public interface IUserService
 {
-    Task<User?> GetByIdAsync(Guid id);
-    Task<IEnumerable<User>> GetAllAsync();
-    Task<User> CreateAsync(User user);
-    Task UpdateAsync(User user);
+    Task<UserResponseDto?> GetByIdAsync(Guid id);
+    Task<IEnumerable<UserResponseDto>> GetAllAsync();
+    Task<UserResponseDto> CreateAsync(CreateUserDto user);
+    Task UpdateAsync(Guid id, UpdateUserDto user);
     Task DeleteAsync(Guid id);
 }

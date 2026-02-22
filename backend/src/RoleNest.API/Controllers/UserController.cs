@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using RoleNest.Application.DTOs.Users;
 using RoleNest.Application.Interfaces.Services;
-using RoleNest.Domain.Entities;
 
 namespace RoleNest.API.Controllers;
 
@@ -17,6 +17,7 @@ public class UserController : ControllerBase
 
     // GET: api/User
     [HttpGet]
+    [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<IActionResult> GetAll()
     {
         var users = await _userService.GetAllAsync();
@@ -25,34 +26,43 @@ public class UserController : ControllerBase
 
     // GET: api/User/{id}
     [HttpGet("{id}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> GetById(Guid id)
     {
         var user = await _userService.GetByIdAsync(id);
-        if (user == null) return NotFound();
         return Ok(user);
     }
 
     // POST: api/User
     [HttpPost]
-    public async Task<IActionResult> Create([FromBody] User user)
+    [ProducesResponseType(StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<IActionResult> Create([FromBody] CreateUserDto dto)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
 
-        var createdUser = await _userService.CreateAsync(user);
+        var createdUser = await _userService.CreateAsync(dto);
         return CreatedAtAction(nameof(GetById), new { id = createdUser.Id }, createdUser);
     }
 
     // PUT: api/User/{id}
     [HttpPut("{id}")]
-    public async Task<IActionResult> Update(Guid id, [FromBody] User user)
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> Update(Guid id, [FromBody] UpdateUserDto dto)
     {
-        if (id != user.Id) return BadRequest("ID mismatch");
-        await _userService.UpdateAsync(user);
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+
+        await _userService.UpdateAsync(id, dto);
         return NoContent();
     }
 
     // DELETE: api/User/{id}
     [HttpDelete("{id}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> Delete(Guid id)
     {
         await _userService.DeleteAsync(id);
